@@ -8,13 +8,13 @@ import InfoCard from "./components/InfoCard";
 
 export default class App extends React.Component {
 
-  constructor(props){
+  constructor (props) {
     super(props)
     this.state = {height: 0, weight: 0, result: 0, resultLabel: ""}
     this.Calculate = this.Calculate.bind(this)
   }
 
-  Calculate(){
+  Calculate() {
     let imc = this.state.weight / (this.state.height * this.state.height)
     let s = this.state
     s.result = imc
