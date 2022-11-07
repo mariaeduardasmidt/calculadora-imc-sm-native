@@ -3,8 +3,6 @@
 
 Projeto realizado na matéria de 'Soluções Mobile' do curso de Engenharia da Computação da UNISATC.
 
-Desenvolvido por: Maria Eduarda Smidt e Carlos Daniel Pasquali.
-
 ```bash
 Objetivo: utilizar JavaScript para criar uma Calculadora de IMC, em React Native, realizando os cálculos e
 classificando os resultados obtidos.
@@ -29,3 +27,8 @@ Para iniciar o projeto em sua máquina, é necessário possuir o Node.js instala
    ```js
    npm start
    ```
+
+<!-- AUTORES -->
+## Autores do projeto
+
+Desenvolvido por: Maria Eduarda Smidt e Carlos Daniel Pasquali.
