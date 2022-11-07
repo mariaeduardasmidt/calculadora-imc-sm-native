@@ -19,20 +19,23 @@ export default class App extends React.Component {
     let s = this.state
     s.resultado = imc
   
-    if (s.resultado < 18.5) {
+    if (s.resultado <= 18.5) {
       s.resultadoText = 'Abaixo do peso'
     }
-    else if (s.resultado > 18.5 && s.resultado < 24.9) {
-      s.resultadoText = 'Saudável'
+    else if (s.resultado >= 18.5 && s.resultado <= 24.9) {
+      s.resultadoText = 'Normal'
     }
-    else if (s.resultado > 25 && s.resultado < 29.9) {
+    else if (s.resultado >= 25 && s.resultado <= 29.9) {
       s.resultadoText = 'Sobrepeso'
     }
-    else if (s.resultado > 30 && s.resultado < 39.9) {
-      s.resultadoText = 'Obesidade'
+    else if (s.resultado >= 30 && s.resultado <= 34.9) {
+      s.resultadoText = 'Obesidade grau I'
     }
-    else if (s.resultado > 40) {
-      s.resultadoText = 'Alto grau de obesidade'
+    else if (s.resultado >= 35 && s.resultado <= 39.9) {
+      s.resultadoText = 'Obesidade grau II'
+    }
+    else if (s.resultado >= 40) {
+      s.resultadoText = 'Obesidade grau III'
     }
     this.setState(s)
   }
@@ -83,7 +86,13 @@ export default class App extends React.Component {
                 {this.state.resultado.toFixed(2)}
               </Text>
               <Text style={{ ...styles.resultado, fontSize: 20 }}>
-                IMC: {this.state.resultadoText}
+                IMC {this.state.resultadoText}
+              </Text>
+            </InfoCard>
+            <InfoCard
+              style={{ backgroundColor: "#f2f2f2", borderRadius: 10, marginTop: 20 }}>
+              <Text> A classificação do índice de massa corporal (IMC) pode ajudar a identificar
+                problemas de obesidade ou desnutrição.
               </Text>
             </InfoCard>
           </ScrollView>
