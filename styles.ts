@@ -25,13 +25,13 @@ export const styles = StyleSheet.create({
   },
   input: {
     fontSize: 18,
-    marginTop: 2
+    backgroundColor: "#f0f0f0"
   },
   buttonText:{
     textAlign: "center",
     fontSize: 18,
     padding: 10,
-    color: "#1F1E25"
+    color: "#ffffff"
   },
   button: {
     marginTop: 16,

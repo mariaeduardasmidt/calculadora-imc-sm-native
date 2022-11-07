@@ -1,6 +1,6 @@
 import React from 'react';
-import { Text, SafeAreaView, ScrollView, View, TextInput, TouchableOpacity } from 'react-native';
-import { Provider as PaperProvider } from "react-native-paper";
+import { Text, SafeAreaView, ScrollView, View, TouchableOpacity } from 'react-native';
+import { Provider as PaperProvider, TextInput } from "react-native-paper";
 import { StatusBar } from "expo-status-bar";
 
 import {styles} from "./styles";
@@ -61,19 +61,23 @@ export default class App extends React.Component {
               >
                 <View style={{ flexDirection:'column' }}>
                   <TextInput
-                    autoCapitalize= "none" 
-                    placeholder= "Informe a altura"
-                    placeholderTextColor= "#1F1E25"
-                    keyboardType= "numeric" 
-                    style={styles.input} 
+                    autoCapitalize="none"
+                    placeholder="Informe a altura"
+                    placeholderTextColor="#1F1E25"
+                    keyboardType="numeric"
+                    mode="outlined"
+                    style={styles.input}
+                    theme={{ colors: {primary: "#26A69A", underlineColor: 'transparent'} }}   
                     onChangeText={(altura)=>{this.setState({altura})}}
                   />
-                  <TextInput 
-                    autoCapitalize= "none"
-                    placeholder= "Informe o peso"
-                    placeholderTextColor= "#1F1E25" 
-                    keyboardType= "numeric" 
-                    style={styles.input}
+                  <TextInput
+                    autoCapitalize="none"
+                    placeholder="Informe o peso"
+                    placeholderTextColor= "#1F1E25"
+                    keyboardType="numeric"
+                    mode="outlined"
+                    style={{ ...styles.input, marginTop: 6 }}
+                    theme={{ colors: {primary: "#26A69A", underlineColor: 'transparent'} }}
                     onChangeText={(massa)=>{this.setState({massa})}}
                   />
                 </View>
@@ -84,6 +88,10 @@ export default class App extends React.Component {
                       Calcular
                     </Text>
                 </TouchableOpacity>
+                </InfoCard>
+                <InfoCard
+                  style={{ backgroundColor: "#f2f2f2", borderRadius: 10, marginTop: 16 }}
+                >
                 <Text style={styles.resultado}>
                   {this.state.resultado.toFixed(2)}
                 </Text>
