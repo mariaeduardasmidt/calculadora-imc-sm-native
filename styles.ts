@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
     backgroundColor: '#ffffff',
     padding: 24
   },
-  resultado:{
+  result: {
     alignSelf: "center",
     color: "#1F1E25",
     fontSize: 45,
@@ -27,15 +27,15 @@ export const styles = StyleSheet.create({
     fontSize: 18,
     backgroundColor: "#f0f0f0"
   },
-  buttonText:{
-    textAlign: "center",
-    fontSize: 18,
-    padding: 10,
-    color: "#ffffff"
-  },
   button: {
     marginTop: 16,
     backgroundColor: "#26A69A",
     borderRadius: 10
   },
+  buttonText: {
+    textAlign: "center",
+    fontSize: 18,
+    padding: 10,
+    color: "#ffffff"
+  }
 })

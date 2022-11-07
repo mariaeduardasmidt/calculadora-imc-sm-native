@@ -10,32 +10,32 @@ export default class App extends React.Component {
 
   constructor(props){
     super(props)
-    this.state = {altura: 0, massa: 0, resultado: 0, resultadoText: ""}
-    this.calcular = this.calcular.bind(this)
+    this.state = {height: 0, weight: 0, result: 0, resultLabel: ""}
+    this.Calculate = this.Calculate.bind(this)
   }
 
-  calcular(){
-    let imc = this.state.massa / (this.state.altura * this.state.altura)
+  Calculate(){
+    let imc = this.state.weight / (this.state.height * this.state.height)
     let s = this.state
-    s.resultado = imc
+    s.result = imc
   
-    if (s.resultado <= 18.5) {
-      s.resultadoText = 'Abaixo do peso'
+    if (s.result <= 18.5) {
+      s.resultLabel = 'Abaixo do peso'
     }
-    else if (s.resultado >= 18.5 && s.resultado <= 24.9) {
-      s.resultadoText = 'Normal'
+    else if (s.result >= 18.5 && s.result <= 24.9) {
+      s.resultLabel = 'Normal'
     }
-    else if (s.resultado >= 25 && s.resultado <= 29.9) {
-      s.resultadoText = 'Sobrepeso'
+    else if (s.result >= 25 && s.result <= 29.9) {
+      s.resultLabel = 'Sobrepeso'
     }
-    else if (s.resultado >= 30 && s.resultado <= 34.9) {
-      s.resultadoText = 'Obesidade grau I'
+    else if (s.result >= 30 && s.result <= 34.9) {
+      s.resultLabel = 'Obesidade grau I'
     }
-    else if (s.resultado >= 35 && s.resultado <= 39.9) {
-      s.resultadoText = 'Obesidade grau II'
+    else if (s.result >= 35 && s.result <= 39.9) {
+      s.resultLabel = 'Obesidade grau II'
     }
-    else if (s.resultado >= 40) {
-      s.resultadoText = 'Obesidade grau III'
+    else if (s.result >= 40) {
+      s.resultLabel = 'Obesidade grau III'
     }
     this.setState(s)
   }
@@ -68,7 +68,7 @@ export default class App extends React.Component {
                     mode="outlined"
                     style={styles.input}
                     theme={{ colors: {primary: "#26A69A", underlineColor: 'transparent'} }}   
-                    onChangeText={(altura)=>{this.setState({altura})}}
+                    onChangeText={(height)=>{this.setState({height})}}
                   />
                   <TextInput
                     autoCapitalize="none"
@@ -78,12 +78,12 @@ export default class App extends React.Component {
                     mode="outlined"
                     style={{ ...styles.input, marginTop: 6 }}
                     theme={{ colors: {primary: "#26A69A", underlineColor: 'transparent'} }}
-                    onChangeText={(massa)=>{this.setState({massa})}}
+                    onChangeText={(weight)=>{this.setState({weight})}}
                   />
                 </View>
                 <TouchableOpacity 
                   style={styles.button} 
-                  onPress={this.calcular}>
+                  onPress={this.Calculate}>
                     <Text style={styles.buttonText}>
                       Calcular
                     </Text>
@@ -92,11 +92,11 @@ export default class App extends React.Component {
                 <InfoCard
                   style={{ backgroundColor: "#f2f2f2", borderRadius: 10, marginTop: 16 }}
                 >
-                <Text style={styles.resultado}>
-                  {this.state.resultado.toFixed(2)}
+                <Text style={styles.result}>
+                  {this.state.result.toFixed(2)}
                 </Text>
-                <Text style={{ ...styles.resultado, fontSize: 20 }}>
-                  IMC {this.state.resultadoText}
+                <Text style={{ ...styles.result, fontSize: 20 }}>
+                  IMC {this.state.resultLabel}
                 </Text>
               </InfoCard>
               <InfoCard

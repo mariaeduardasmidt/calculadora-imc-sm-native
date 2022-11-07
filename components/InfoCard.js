@@ -1,7 +1,7 @@
 import { Card } from "react-native-paper";
 
-export default function InfoCard({ image, title, titleStyle, children, 
-  buttonLabel, buttonPress, ...props }) {
+export default function InfoCard({ image, title, titleStyle, children, buttonLabel,
+  buttonPress, ...props }) {
 
   return (
     <Card {...props}>
