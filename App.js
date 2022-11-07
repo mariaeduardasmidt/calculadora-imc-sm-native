@@ -90,7 +90,7 @@ export default class App extends React.Component {
                 </TouchableOpacity>
                 </InfoCard>
                 <InfoCard
-                  style={{ backgroundColor: "#f2f2f2", borderRadius: 10, marginTop: 16 }}
+                  style={{ backgroundColor: "#f2f2f2", borderRadius: 10, marginTop: 20 }}
                 >
                 <Text style={styles.result}>
                   {this.state.result.toFixed(2)}
