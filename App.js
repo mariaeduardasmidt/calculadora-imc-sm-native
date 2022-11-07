@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, SafeAreaView, ScrollView, View, TextInput, TouchableOpacity } from 'react-native';
+import { Text, SafeAreaView, ScrollView, View, TextInput, TouchableOpacity, Image } from 'react-native';
 import { Provider as PaperProvider } from "react-native-paper";
 import { StatusBar } from "expo-status-bar";
 
@@ -20,19 +20,19 @@ export default class App extends React.Component {
     s.resultado = imc
   
     if (s.resultado < 18.5) {
-      s.resultadoText = 'Cuidado! Abaixo do peso.'
+      s.resultadoText = 'Abaixo do peso'
     }
     else if (s.resultado > 18.5 && s.resultado < 24.9) {
-      s.resultadoText = 'Saudável! Seu IMC está normal.'
+      s.resultadoText = 'Saudável'
     }
     else if (s.resultado > 25 && s.resultado < 29.9) {
-      s.resultadoText = 'Cuidado! Sobrepeso.'
+      s.resultadoText = 'Sobrepeso'
     }
     else if (s.resultado > 30 && s.resultado < 39.9) {
-      s.resultadoText = 'Cuidado! Obesidade.'
+      s.resultadoText = 'Obesidade'
     }
     else if (s.resultado > 40) {
-      s.resultadoText = 'Cuidado! Alto grau de obesidade.'
+      s.resultadoText = 'Alto grau de obesidade'
     }
     this.setState(s)
   }
@@ -65,7 +65,7 @@ export default class App extends React.Component {
               />
               <TextInput 
                 autoCapitalize= "none"
-                placeholder= "Informe a massa"
+                placeholder= "Informe o peso"
                 placeholderTextColor= "#1F1E25" 
                 keyboardType= "numeric" 
                 style={styles.input}
@@ -83,7 +83,7 @@ export default class App extends React.Component {
                 {this.state.resultado.toFixed(2)}
               </Text>
               <Text style={{ ...styles.resultado, fontSize: 20 }}>
-                {this.state.resultadoText}
+                IMC: {this.state.resultadoText}
               </Text>
             </InfoCard>
           </ScrollView>
