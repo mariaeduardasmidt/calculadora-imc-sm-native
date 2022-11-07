@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, SafeAreaView, ScrollView, View, TouchableOpacity } from 'react-native';
+import { Text, SafeAreaView, ScrollView, View, TouchableOpacity, Image } from 'react-native';
 import { Provider as PaperProvider, TextInput } from "react-native-paper";
 import { StatusBar } from "expo-status-bar";
 
@@ -105,6 +105,10 @@ export default class App extends React.Component {
                   problemas de obesidade ou desnutrição.
                 </Text>
               </InfoCard>
+              <Image
+                style={{ alignSelf: "center", marginTop: 36 }}
+                source={require('./assets/image.png')}
+              />
             </ScrollView>
           </SafeAreaView>
         </View>
