@@ -19,7 +19,7 @@ Para iniciar o projeto em sua máquina, é necessário possuir o Node.js instala
 
 1. Clone o repositório
    ```sh
-   git clone https://github.com/mariaeduardasmidt/calculadora-imc-sm.git
+   git clone https://github.com/mariaeduardasmidt/calculadora-imc-sm-react-native.git
    ```
 3. Instale os pacotes
    ```sh
