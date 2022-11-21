@@ -5,7 +5,9 @@ Projeto realizado na matéria de 'Soluções Mobile' do curso de Engenharia da C
 
 ```bash
 Objetivo: utilizar JavaScript para criar uma Calculadora de IMC, em React Native, realizando os cálculos
-entre altura e peso, e classificando os resultados obtidos conforme a tabela de IMC.
+entre altura e peso, e classificando os resultados obtidos conforme a tabela de IMC. Aplicado também a
+utilização de AsyncStorage para a persistência de dados, possibilitando o armazenamento do último
+registro de IMC.
 ```
 
 <!-- INICIANDO -->
