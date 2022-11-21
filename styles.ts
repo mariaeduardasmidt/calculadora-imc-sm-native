@@ -9,8 +9,13 @@ export const styles = StyleSheet.create({
   result: {
     alignSelf: "center",
     color: "#1F1E25",
-    fontSize: 45,
+    fontSize: 30,
     fontWeight: 'bold',
+    padding: 6
+  },
+  resultAsync:{
+    color: "#1F1E25",
+    fontSize: 18,
     padding: 6
   },
   listTitle: {
